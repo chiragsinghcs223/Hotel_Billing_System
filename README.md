@@ -76,28 +76,6 @@ Service Charges: 2100
 Total Bill     : 8100
 ```
 
-## ⚠️ Note
-
-There is a small issue in the current bill calculation logic:
-
-```java
-double totalBill = (roomBill + serviceBill) * days;
-```
-
-Since `roomBill` is already calculated as:
-
-```java
-int roomBill = roomCharge * days;
-```
-
-The correct calculation should be:
-
-```java
-double totalBill = roomBill + (serviceBill * days);
-```
-
-This ensures room charges are not multiplied by the number of days twice.
-
 ## 🔮 Future Enhancements
 
 - Multiple room types (Standard, Deluxe, Suite)
