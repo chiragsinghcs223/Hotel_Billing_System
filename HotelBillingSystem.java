@@ -45,7 +45,7 @@ public class HotelBillingSystem {
                 System.out.println("Invalid Choice!");
         }
 
-        double totalBill = (roomBill + serviceBill)*days;
+        int totalBill = (roomBill + serviceBill)*days;
 
         System.out.println("    BILL DETAILS ");
         System.out.println("Room Bill      : " + roomBill);
